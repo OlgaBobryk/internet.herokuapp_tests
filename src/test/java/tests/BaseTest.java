@@ -2,6 +2,7 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.PropertyManager;
 
@@ -19,5 +20,10 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", propertyManager.get("PATH_TO_DRIVER"));
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void tearDown(){
+        driver.quit();
     }
 }
