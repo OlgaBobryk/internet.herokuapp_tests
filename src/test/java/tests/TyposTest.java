@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Typos extends BaseTest{
+public class TyposTest extends BaseTest{
     @Test
     public void spellCheckTest(){
         //Open url of page

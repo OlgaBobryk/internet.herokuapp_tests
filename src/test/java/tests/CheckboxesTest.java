@@ -2,13 +2,10 @@ package tests;
 
 import constants.Urls;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.awt.*;
-
-public class Checkboxes extends BaseTest {
+public class CheckboxesTest extends BaseTest {
 
     private void openurl() {
         //Open url of  page

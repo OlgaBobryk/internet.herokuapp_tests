@@ -6,9 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
-public class NotificationMessages extends BaseTest {
+public class NotificationMessagesTest extends BaseTest {
     @Test
     public void successfulActionIsExpectedTest() {
         //Open url of page
