@@ -36,7 +36,7 @@ public class Checkboxes extends BaseTest {
     }
 
     @Test
-    public void secondCheckboxChecked() {
+    public void secondCheckboxCheckedTest() {
         openurl();
         //Checkbox
         driver.findElement(By.cssSelector("form :last-child"));
@@ -46,7 +46,7 @@ public class Checkboxes extends BaseTest {
     }
 
     @Test
-    public void secondCheckboxUnchecked() {
+    public void secondCheckboxUncheckedTest() {
         openurl();
         //Click
         driver.findElement(By.cssSelector("form :last-child")).click();
