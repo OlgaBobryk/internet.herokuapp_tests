@@ -1,9 +1,10 @@
-package pages;
+package pages.checkboxPage;
 
 import constants.Urls;
 import org.openqa.selenium.WebDriver;
+import pages.BasePage;
 
-public class OpenCheckboxesPage extends BasePage{
+public class OpenCheckboxesPage extends BasePage {
 
 
     public OpenCheckboxesPage(WebDriver driver) {
