@@ -27,7 +27,8 @@ public class FileUploaderPage extends BasePage {
     }
 
     public void chooseFile() {
-        driver.findElement(CHOOSE_FILE).sendKeys("C:\\Users\\Admin\\IdeaProjects\\internet.herokuapp_tests\\src\\test\\resources\\my_img.png");
+        String path=System.getProperty("user.dir").concat("/src/test/resources/my_img.png");
+        driver.findElement(CHOOSE_FILE).sendKeys(path);
 
     }
 

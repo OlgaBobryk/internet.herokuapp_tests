@@ -19,25 +19,25 @@ public class DropdownPage extends BasePage {
         driver.get(Urls.DROPDOWN_URL);
     }
 
-    public boolean checkSize() {
+    public int checkSize() {
         WebElement dropdownList = driver.findElement(DROPDOWN_LIST);
         Select selectOption = new Select(dropdownList);
-        selectOption.getOptions().size();
-        return true;
+        return selectOption.getOptions().size();
     }
 
-
-    public boolean checkFirstElement() {
+    public String checkFirstElement() {
         WebElement dropdownList = driver.findElement(DROPDOWN_LIST);
         Select selectOption = new Select(dropdownList);
         selectOption.selectByValue("1");
-        return true;
+        String textOption1 = selectOption.getFirstSelectedOption().getText();
+        return textOption1;
     }
 
-    public boolean checkSecondElement() {
+    public String checkSecondElement() {
         WebElement dropdownList = driver.findElement(DROPDOWN_LIST);
         Select selectOption = new Select(dropdownList);
         selectOption.selectByValue("2");
-        return true;
+        String textOption2 = selectOption.getFirstSelectedOption().getText();
+        return textOption2;
     }
 }

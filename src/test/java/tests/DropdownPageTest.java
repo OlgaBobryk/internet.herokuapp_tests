@@ -12,7 +12,7 @@ public class DropdownPageTest extends BaseTest {
         DropdownPage dropdownPage = new DropdownPage(driver);
         dropdownPage.openPage();
         dropdownPage.checkSize();
-        Assert.assertTrue(dropdownPage.checkSize(), "There aren't any elements");
+        Assert.assertEquals(dropdownPage.checkSize(), 3, "Number of elements is different");
     }
 
     @Test
@@ -20,7 +20,7 @@ public class DropdownPageTest extends BaseTest {
         DropdownPage dropdownPage = new DropdownPage(driver);
         dropdownPage.openPage();
         dropdownPage.checkFirstElement();
-        Assert.assertTrue(dropdownPage.checkFirstElement(), "The first element isn't selected");
+        Assert.assertEquals(dropdownPage.checkFirstElement(), "Option 1","The first element isn't selected");
     }
 
     @Test
@@ -28,6 +28,7 @@ public class DropdownPageTest extends BaseTest {
         DropdownPage dropdownPage = new DropdownPage(driver);
         dropdownPage.openPage();
         dropdownPage.checkSecondElement();
-        Assert.assertTrue(dropdownPage.checkFirstElement(), "The second element isn't selected");
+        Assert.assertEquals(dropdownPage.checkSecondElement(), "Option 2", "The second element isn't selected");
     }
+
 }
